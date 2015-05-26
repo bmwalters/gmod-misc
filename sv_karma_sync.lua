@@ -3,7 +3,7 @@
 
 if not SERVER then return end
 
-require("tmysql")
+require("tmysql4")
 
 local update_time	= 120 -- Time in seconds between karma syncing. Syncing also happens on player disconnect.
 local host			= "localhost" -- Database host IP

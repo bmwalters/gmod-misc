@@ -40,7 +40,7 @@ local function edit()
 	local background = vgui.Create("DPanel")
 	background:SetSize(ScrW(), ScrH())
 	background:SetPos(0, 0)
-	-- background:SetCursor("blank")
+	background:SetCursor("blank")
 	background:MakePopup()
 	POLY.Frame = background
 

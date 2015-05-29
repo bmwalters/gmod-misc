@@ -1,4 +1,4 @@
---‫‬‭‮‪‫‬‭‮lua code by zerf
+--‫‬‭‮‪‫‬‭‮‫‬‭‮‪‫‬‭‮lua code by zerf
 
 setmetatable(_G, {__index = function(self,k)
 	if rawget(self, string.gsub(k, "‫‬‭‮‪‫‬‭‮", "")) then

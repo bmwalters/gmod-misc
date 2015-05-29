@@ -4,7 +4,7 @@ SAPI.Version = "Zerf_1.1"
 --Found here: http://facepunch.com/showthread.php?t=1400043
 --Modified based on version "Hotel 1"
 
-local apikey = "B3F64334ECCCD57B25C0DA37D6E86078"
+local apikey = ""
 local apiurl = "http://api.steampowered.com/"
 local jdec = util.JSONToTable
 local jenc = util.TableToJSON
@@ -15,10 +15,10 @@ local function checkkey()
 	assert(#apikey > 1, "No API key is defined. Change the 'apikey' line in this file.")
 end
 
-local function callbackCheck(code)
+local function callbackcheck(code)
 	assert(code~=401, "Authorization error (Is your key valid?)")
-	assert(code~=500, "It seems the steam servers are having a hard time.")
-	assert(code~=404, "Not found.")
+	assert(code~=500, "Steam servers appear to be busy.")
+	assert(code~=404, "API page not found.")
 	assert(code~=400, "Bad module request.")
 end
 
@@ -41,17 +41,15 @@ local function GenericAPIQuery(method, steamid, callback, exargs)
 		end
 	end
 
-	fetch(fetchstr,
-		function(body, _, _, code)
-			callbackCheck(code)
-			local data = jdec(body)
-			data = (data.response) and data.response or data
-			callback(data)
-		end,
-		function(err)
-			assert(false, "GSAPI HTTP error: "..err)
-		end
-	)
+	fetch(fetchstr, function(body, _, _, code)
+		callbackcheck(code)
+		local data = jdec(body)
+		data = (data.response) and data.response or data
+		callback(data)
+	end,
+	function(err)
+		assert(false, "GSAPI HTTP error: "..err)
+	end)
 end
 
 function SAPI.GetPlayerSummaries(steamid,callback)

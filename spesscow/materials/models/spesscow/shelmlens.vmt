@@ -1,0 +1,25 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/spesscow/shelmlens"
+	"$envmap" "env_cubemap"
+	"$envmaptint" " [7.6 5.6 4.6]"
+	"$envmapsaturation" "1.5"
+	"$envmapbrightness" "0.5"
+	"$envmapmask" "models/player/sniper/sniper_lens_specular"
+    "$translucent" 1
+	"$nocull" 1
+	"$additive" 0
+	"$model" "1"
+	"$phong" "1"
+	"$phongexponent" "20"
+	"$phongboost" "250"
+	"$phongfresnelranges"	"[.3 1 8]"
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+	}
+}

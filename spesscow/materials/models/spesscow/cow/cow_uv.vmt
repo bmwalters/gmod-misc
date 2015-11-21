@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/spesscow/cow/cow_uv"
+	"$halflambert" "1"
+}

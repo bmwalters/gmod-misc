@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" 	"models/sirgibs/csgo_chicken/chicken_white"
+	"$bumpmap" 	"models/sirgibs/csgo_chicken/chicken_normal"
+
+		"$phong" "1"
+	"$phongBoost" "2"
+	"$phongExponent" "2"  removed to not conflict with phongexponenttexture
+	"$phongTint" "[1.2 1 1.0]"
+	"$phongFresnelRanges" "[.2 .5 1]"
+	"$phongdisablehalflambert" "1"
+	
+	"$alphatest" "1"
+	"$nocull" "1"
+
+	"$surfaceprop" "flesh"
+}

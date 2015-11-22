@@ -1,0 +1,12 @@
+{
+	"Name": "Test Addon",
+	"Version": "0.2",
+	"AddFiles": [
+		"materials/test/hi.vmt"
+	],
+	"Gamemode": "sandbox",
+	"Loader": "testaddon.lua",
+	"Dependencies": [
+		"Test Addon 2"
+	]
+}

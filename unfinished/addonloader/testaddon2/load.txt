@@ -1,0 +1,5 @@
+{
+	"Name": "Test Addon 2",
+	"Version": "1.0",
+	"Loader": "testaddon2.lua"
+}

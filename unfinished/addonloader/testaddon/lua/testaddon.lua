@@ -1,0 +1,7 @@
+print("Hello from testaddon!")
+print("Hello from testaddon!")
+print("Hello from testaddon!")
+print("Hello from testaddon!")
+concommand.Add("testaddon", function()
+	print("MMMMMMMMMMm")
+end)
